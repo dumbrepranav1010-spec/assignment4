@@ -13,7 +13,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url: '${GIT_REPO_URL}'
+                git branch: 'main', url: 'https://github.com/dumbrepranav1010-spec/assignment4.git'
             }
         }
 
