@@ -28,7 +28,6 @@ pipeline {
                     sh 'echo $DOCKER_CRED_PSW | docker login -u $DOCKER_CRED_USR --password-stdin'
                     sh 'ocker push ${DOCKERHUB_USER}/${IMAGE_NAME}:${IMAGE_TAG}'
                     sh 'ocker push ${DOCKERHUB_USER}/${IMAGE_NAME}:latest'
-                }
             }
         }
 
