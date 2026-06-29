@@ -34,7 +34,7 @@ pipeline {
         stage('Deploy to Minikube') {
             steps {
                 sh 'kubectl set image deployment/assign4 ass4=${DOCKERHUB_USER}/${IMAGE_NAME}:${IMAGE_TAG}'
-                sh 'curl $(minikube service assign4 --url)'
+                sh 'curl -s $(minikube service assign4 --url)'
             }
         }
     }
