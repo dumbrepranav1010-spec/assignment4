@@ -27,7 +27,7 @@ pipeline {
             steps {
                     sh 'echo $DOCKER_CRED_PSW | docker login -u $DOCKER_CRED_USR --password-stdin'
                     sh 'docker push ${DOCKERHUB_USER}/${IMAGE_NAME}:${IMAGE_TAG}'
-                    sh 'docker push ${DOCKERHUB_USER}/${IMAGE_NAME}:latest'
+                    sh 'docker push ${DOCKERHUB_USER}/${IMAGE_NAME}:v1'
             }
         }
 
