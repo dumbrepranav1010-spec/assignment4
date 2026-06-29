@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKERHUB_USER = 'dumbrepranav10'
         IMAGE_NAME     = 'ass4'
-        IMAGE_TAG      = 'v1'
+        IMAGE_TAG      = "${BUILD_NUMBER}"
         GIT_REPO_URL   = "https://github.com/dumbrepranav1010-spec/assignment4.git"
 	DOCKER_CRED	= credentials('dockerhub')
     }
